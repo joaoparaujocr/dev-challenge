@@ -3,13 +3,18 @@ import Image from "next/image";
 import Turbo from "./../../../public/imageBanner.svg";
 import Fundo from "./../../../public/Fundo.svg";
 import ButtonPlayer from "../ButtonPlayer";
+import Movie from "@/interfaces/Movie";
 
-const Banner = () => {
+interface BannerProps {
+  movie: Movie;
+}
+
+const Banner = ({ movie: { banner, logo, description } }: BannerProps) => {
   return (
     <BannerContainer>
       <BannerImage>
         <Image
-          src={Fundo}
+          src={banner}
           alt=""
           fill
           style={{
@@ -18,12 +23,8 @@ const Banner = () => {
         />
       </BannerImage>
       <Infos>
-        <Image src={Turbo} alt="" />
-        <p>
-          Um caracol obcecado por velocidade que sonha em ser o maior piloto de
-          carros de corrida do mundo tem sua chance quando um acidente o imbui
-          com velocidade de alta octanagem.
-        </p>
+        <Image src={logo} width={213} height={110} alt="" />
+        <p>{description}</p>
         <ButtonPlayer />
       </Infos>
     </BannerContainer>

@@ -4,6 +4,15 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'challenge-seven-zeta.vercel.app',
+        pathname: "**"
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
