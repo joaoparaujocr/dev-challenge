@@ -14,7 +14,7 @@ const BannerContainer = styled.div`
 export const BannerImage = styled.div`
   width: 100%;
   height: 100%;
-  mask-image: linear-gradient(230deg, #000000 0%, rgba(0, 0, 0, 0) 97.67%);
+  mask-image: linear-gradient(190deg, #000000 0%, rgba(0, 0, 0, 0) 97.67%);
   position: absolute;
 `;
 
@@ -27,10 +27,16 @@ export const Infos = styled.div`
   position: relative;
   z-index: 1;
 
-  p {
+  > p {
     color: white;
     font-family: ${nunitoSans.style.fontFamily};
     font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+
+  > image {
+    max-width: 213px;
   }
 `;
 

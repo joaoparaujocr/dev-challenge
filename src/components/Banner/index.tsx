@@ -23,7 +23,7 @@ const Banner = ({ movie: { banner, logo, description } }: BannerProps) => {
         />
       </BannerImage>
       <Infos>
-        <Image src={logo} width={213} height={110} alt="" />
+        <Image src={logo} width={213} height={190} alt="" />
         <p>{description}</p>
         <ButtonPlayer />
       </Infos>

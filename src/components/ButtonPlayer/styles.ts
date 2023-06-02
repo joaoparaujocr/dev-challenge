@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { inter } from "@/fonts";
 
 type ButtonProps = {
   width?: number;
@@ -30,6 +31,11 @@ const Button = styled.button<ButtonProps>`
     );
     color: white;
   `}
+
+  p {
+    font-family: ${inter.style.fontFamily};
+    font-weight: 600;
+  }
 `;
 
 export default Button;
