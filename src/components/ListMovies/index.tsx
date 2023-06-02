@@ -17,7 +17,9 @@ const ListMovies = ({ movies, title }: ListMoviesProps) => {
           return (
             <Link key={id} href={`/movie/${id}/`}>
               <Image alt="" src={cover} width={100} height={100} />
-              <div></div>
+              <div>
+                <span />
+              </div>
             </Link>
           );
         })}

@@ -26,6 +26,7 @@ export const Infos = styled.div`
   width: 100%;
   position: relative;
   z-index: 1;
+  gap: 24px;
 
   > p {
     color: white;
@@ -37,6 +38,10 @@ export const Infos = styled.div`
 
   > image {
     max-width: 213px;
+  }
+
+  @media (max-width: 700px) {
+    margin: 0 24px;
   }
 `;
 

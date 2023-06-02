@@ -32,6 +32,15 @@ const FooteContainer = styled.footer`
     font-size: 0.75rem;
     color: white;
   }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    gap: 16px;
+
+    div:first-of-type {
+      flex-direction: column;
+    }
+  }
 `;
 
 export default FooteContainer;
