@@ -5,15 +5,17 @@ import Free from "./../.././../public/free.svg";
 import BackButton from "@/Icons/BackButton";
 import ButtonPlayer from "../ButtonPlayer";
 import { useRouter } from "next/router";
+import formatterHours from "@/utils/fomatterTime";
 
 interface LayoutMovieProps {
   movie: Movie;
 }
 
 export function LayoutMovie({
-  movie: { banner, logo, description },
+  movie: { banner, logo, description, durationInMinutes },
 }: LayoutMovieProps) {
   const router = useRouter();
+  const durationFormatter = formatterHours(durationInMinutes);
 
   const handleGoBack = () => router.back();
 
@@ -41,7 +43,7 @@ export function LayoutMovie({
           <div className="durationAndClassication">
             <span>
               <p>Duração</p>
-              <p>1h20</p>
+              <p>{durationFormatter}</p>
             </span>
             <Image src={Free} width={40} height={40} alt="" />
           </div>

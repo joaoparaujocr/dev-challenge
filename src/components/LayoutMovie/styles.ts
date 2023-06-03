@@ -82,6 +82,6 @@ export const Infos = styled.section`
   }
 
   @media (max-width: 700px) {
-    padding: 0 24px;
+    padding: 42px 24px;
   }
 `;
