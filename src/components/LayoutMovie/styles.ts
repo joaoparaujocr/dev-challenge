@@ -28,6 +28,12 @@ export const ContainerHeader = styled.div`
     z-index: 3;
     bottom: 60px;
     left: 60px;
+
+    @media (max-width: 700px) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 `;
 
