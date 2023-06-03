@@ -8,6 +8,7 @@ const FooteContainer = styled.footer`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 
   div:first-of-type {
     color: white;

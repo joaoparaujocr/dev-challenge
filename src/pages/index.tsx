@@ -12,14 +12,14 @@ interface HomeProps {
 export const getServerSideProps: GetServerSideProps<{
   movies: Movie[];
 }> = async () => {
-  const { data: movies } = await api.get("");
+  const { data: movies } = await api.get("").catch(() => {
+    throw new Error("Algo deu errado.");
+  });
 
   return { props: { movies } };
 };
 
 export default function Home({ movies }: HomeProps) {
-  console.log(movies);
-
   return (
     <Layout>
       <Banner movie={movies[2]} />

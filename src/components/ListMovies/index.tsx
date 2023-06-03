@@ -6,11 +6,12 @@ import Link from "next/link";
 interface ListMoviesProps {
   movies: Movie[];
   title: string;
+  topDistance?: number;
 }
 
-const ListMovies = ({ movies, title }: ListMoviesProps) => {
+const ListMovies = ({ movies, title, topDistance }: ListMoviesProps) => {
   return (
-    <Container>
+    <Container top={topDistance}>
       <p>{title}</p>
       <List>
         {movies.map(({ id, cover }) => {

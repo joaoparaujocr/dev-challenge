@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { nunitoSans } from "@/fonts";
 
-export const Container = styled.div`
+type ContainerProps = {
+  top?: number;
+};
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   padding: 0 60px;
   position: relative;
-  top: -70px;
+  top: ${({ top }) => top ?? 0};
   gap: 10px;
 
   > p {
